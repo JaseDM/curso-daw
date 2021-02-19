@@ -171,9 +171,9 @@ function fakeLogin() {
       }, 1200);
       setTimeout(function () {
         if (redirectOrigin === 'checkout') {
-          window.location.href = '/checkout-step1.html';
+          window.location.href = '/checkout-step1';
         } else {
-          window.location.href = '/shop.html';
+          window.location.href = '/shop';
         }
       }, 3200);
     } else if (emailValue === 'john@mail.com' && passwordValue === 'testpassword') {
@@ -185,9 +185,9 @@ function fakeLogin() {
       }, 1200);
       setTimeout(function () {
         if (redirectOrigin === 'checkout') {
-          window.location.href = '/checkout-step1.html';
+          window.location.href = '/checkout-step1';
         } else {
-          window.location.href = '/shop.html';
+          window.location.href = '/shop';
         }
       }, 3200);
     } else if (emailValue === 'samantha@mail.com' && passwordValue === 'testpassword') {
@@ -199,9 +199,9 @@ function fakeLogin() {
       }, 1200);
       setTimeout(function () {
         if (redirectOrigin === 'checkout') {
-          window.location.href = '/checkout-step1.html';
+          window.location.href = '/checkout-step1';
         } else {
-          window.location.href = '/shop.html';
+          window.location.href = '/shop';
         }
       }, 3200);
     } else if (emailValue === 'arthur@mail.com' && passwordValue === 'testpassword') {
@@ -213,9 +213,9 @@ function fakeLogin() {
       }, 1200);
       setTimeout(function () {
         if (redirectOrigin === 'checkout') {
-          window.location.href = '/checkout-step1.html';
+          window.location.href = '/checkout-step1';
         } else {
-          window.location.href = '/shop.html';
+          window.location.href = '/shop';
         }
       }, 3200);
     } else {
@@ -236,7 +236,7 @@ function fakeLogout() {
       toasts.service.success('', 'fas fa-check', 'Successfully logged out', 'bottomRight', 2000);
     }, 600);
     setTimeout(function () {
-      window.location.href = '/home.html';
+      window.location.href = '/';
     }, 2600);
   });
 } //Accounts panel (Demo: do not use in production)
@@ -265,10 +265,10 @@ $(window).on('load', function () {
   var url = window.location.href;
   var userData = JSON.parse(localStorage.getItem('user'));
 
-  if (url.indexOf("/authentication.html") > -1) {
+  if (url.indexOf("/authentication") > -1) {
     //If logged in, redirect
     if (userData.isLoggedIn) {
-      window.location.href = '/shop.html';
+      window.location.href = '/shop';
     }
   } else {
     console.log('something');

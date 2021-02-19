@@ -1,36 +1,52 @@
 
 
 const getInicio = (req, res) => {
-    res.render('home');
+    res.render('home', {
+        title: 'WEAR FOR CLUBER'
+    });
 
 }
 
 const getAuth = (req, res) => {
-    res.render('authentication');
+    res.render('authentication'), {
+        title: 'Login'
+    };
 }
 
 const getAccount = (req, res) => {
-    res.render('account');
+    res.render('account', {
+        title: 'Account'
+    });
 }
 
 const getOrders = (req, res) => {
-    res.render('orders');
+    res.render('orders', {
+        title: 'Orders'
+    });
 }
 
 const getProduct = (req, res) => {
-    res.render('product');
+    res.render('product', {
+        title: 'Products'
+    });
 }
 
 const getShop = (req, res) => {
-    res.render('shop');
+    res.render('shop', {
+        title: 'Shop'
+    });
 }
 
 const getWishList = (req, res) => {
-    res.render('wishlist');
+    res.render('wishlist', {
+        title: 'Whislist'
+    });
 }
 
 const getCart = (req, res) => {
-    res.render('cart');
+    res.render('cart', {
+        title: 'Cart'
+    });
 }
 
 

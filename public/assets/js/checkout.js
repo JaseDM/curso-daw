@@ -186,7 +186,7 @@ $(document).ready(function () {
       else {
           //Redirect to the correct checkout object step
           if (checkout.step !== currentStep) {
-            window.location.href = "/checkout-step".concat(checkout.step, ".html");
+            window.location.href = "/checkout-step".concat(checkout.step);
           } //If checkout step1
 
 
@@ -237,7 +237,7 @@ $(document).ready(function () {
       checkout.step = parseInt(checkout.step) + 1;
       localStorage.setItem('checkout', JSON.stringify(checkout));
       setTimeout(function () {
-        window.location.href = '/checkout-step2.html';
+        window.location.href = '/checkout-step2';
         $this.removeClass('is-loading');
       }, 1000);
     } //Handle step 2
@@ -260,7 +260,7 @@ $(document).ready(function () {
           checkout.total = (parseFloat(checkout.total) + parseFloat(checkout.shipping)).toFixed(2);
           localStorage.setItem('checkout', JSON.stringify(checkout));
           setTimeout(function () {
-            window.location.href = '/checkout-step3.html';
+            window.location.href = '/checkout-step3';
             $this.removeClass('is-loading');
           }, 1000);
         }
@@ -282,7 +282,7 @@ $(document).ready(function () {
             checkout.paymentMethod = paymentMethod;
             localStorage.setItem('checkout', JSON.stringify(checkout));
             setTimeout(function () {
-              window.location.href = '/checkout-step4.html';
+              window.location.href = '/checkout-step4';
               $this.removeClass('is-loading');
             }, 1000);
           }
@@ -295,7 +295,7 @@ $(document).ready(function () {
             checkout.orderNotes = orderNotes;
             localStorage.setItem('checkout', JSON.stringify(checkout));
             setTimeout(function () {
-              window.location.href = '/checkout-step5.html';
+              window.location.href = '/checkout-step5';
               $this.removeClass('is-loading');
             }, 1000);
           }
@@ -313,7 +313,7 @@ $(document).ready(function () {
 
       if ($('#checkout-2').length) {
         setTimeout(function () {
-          window.location.href = '/checkout-step1.html';
+          window.location.href = '/checkout-step1';
           $this.removeClass('is-loading');
         }, 1000);
       } //Back from step 3 to step 2
@@ -322,13 +322,13 @@ $(document).ready(function () {
           checkout.shipping = 0.00.toFixed(2);
           localStorage.setItem('checkout', JSON.stringify(checkout));
           setTimeout(function () {
-            window.location.href = '/checkout-step2.html';
+            window.location.href = '/checkout-step2';
             $this.removeClass('is-loading');
           }, 1000);
         } //Back from step 4 to step 3
         else if ($('#checkout-4').length) {
             setTimeout(function () {
-              window.location.href = '/checkout-step3.html';
+              window.location.href = '/checkout-step3';
               $this.removeClass('is-loading');
             }, 1000);
           }
@@ -340,7 +340,7 @@ $(document).ready(function () {
     $this.addClass('is-loading');
     convertCheckoutToOrder();
     setTimeout(function () {
-      window.location.href = '/orders.html';
+      window.location.href = '/orders';
     }, 1200);
   }); //Credit card
 

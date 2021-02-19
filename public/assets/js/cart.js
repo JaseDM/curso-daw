@@ -332,11 +332,11 @@ function initCheckout() {
 
     if (!userData.isLoggedIn) {
       setTimeout(function () {
-        window.location.href = '/authentication.html?origin=checkout';
+        window.location.href = '/authentication?origin=checkout';
       }, 1200);
     } else {
       setTimeout(function () {
-        window.location.href = '/checkout-step1.html';
+        window.location.href = '/checkout-step1';
       }, 1200);
     }
   });
